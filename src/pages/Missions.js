@@ -23,8 +23,8 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.map((mission) => (
-            <tr key={mission.mission_id}>
-              <td className="fw-bold" style={{ width: '15%' }}>{mission.mission_name}</td>
+            <tr key={mission.id}>
+              <td className="fw-bold" style={{ width: '15%' }}>{mission.name}</td>
               <td style={{ width: '55%' }}>{mission.description}</td>
               <td />
               <td />

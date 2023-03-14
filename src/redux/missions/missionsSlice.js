@@ -7,7 +7,12 @@ export const getMissions = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios(urlMission);
-      return res.data;
+      const missionsData = await res.data.map((mission) => ({
+        id: mission.mission_id,
+        name: mission.mission_name,
+        description: mission.description,
+      }));
+      return missionsData;
     } catch (error) {
       return thunkAPI.rejectWithValue(
         error?.data?.message || 'Cannot fetch missions...',
