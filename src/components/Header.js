@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 import logo from '../assets/images/space-hub-logo.png';
+import NavbarItem from './NavbarItem';
 
 const Header = () => (
   <Navbar bg="light" expand="lg">
@@ -15,11 +16,7 @@ const Header = () => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav>
-          <Nav.Link href="#">Rockets</Nav.Link>
-          <Nav.Link href="#">Missions</Nav.Link>
-          <Nav.Link href="#">My Profile</Nav.Link>
-        </Nav>
+        <NavbarItem />
       </Navbar.Collapse>
     </Container>
   </Navbar>
