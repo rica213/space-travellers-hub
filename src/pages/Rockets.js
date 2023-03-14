@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import RocketItem from '../components/RocketItem';
 
-const rockets = () => {
+const Rockets = () => {
   const { rockets } = useSelector((state) => state.rocket);
   return (
     <div>
@@ -10,7 +10,7 @@ const rockets = () => {
         <RocketItem rocket={rocketObj} key={rocketObj.id} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default rockets;
+export default Rockets;
