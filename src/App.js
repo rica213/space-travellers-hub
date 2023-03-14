@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import Layout from './components/Layout';
 import Rockets from './pages/Rockets';
 import MyProfile from './pages/MyProfile';
 import Missions from './pages/Missions';
 import NoMatch from './pages/NoMatch';
+import { getRockets } from './redux/rockets/rocketSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRockets());
+  }, [dispatch]);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
