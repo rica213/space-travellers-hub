@@ -4,8 +4,8 @@ import { async } from "q";
 const url = 'https://api.spacexdata.com/v3/rockets';
 
 const getRockets = createAsyncThunk('rockets/data', async () => {
-  const rocketsData = await fetch(url).then((resp) => resp.json()).catch(() => false);
-  rocketsData.forEach(rocketObj => {
+  const response = await fetch(url).then((resp) => resp.json()).catch(() => false);
+  const rocketsData = response.forEach(rocketObj => {
     return {
       id: rocketObj.rocket_id,
       name: rocketObj.rocket_name,
@@ -15,24 +15,25 @@ const getRockets = createAsyncThunk('rockets/data', async () => {
       reserved: false
     }
   });
-
+  return rocketsData
 });
 
 const initialState = {
-  rockets: [
-    {
-      id: '',
-      name: '',
-      type: '',
-      description: '',
-      flickr_images: '',
-      reserved: false
-    }
-  ]
+  rockets: []
 }
 
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {}
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getRockets.fulfilled, (state, action) => {
+      return {
+        ...state,
+        rockets: action.payload
+      }
+    });
+  }
 })
+
+export default rocketSlice.reducer;
