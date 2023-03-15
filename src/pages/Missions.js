@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Badge, Button, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
+import {
+  joinMission,
+  leaveMission,
+} from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const { missions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
 
   return (
     <div className="px-5 pr-5">
