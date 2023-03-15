@@ -5,7 +5,7 @@ import NavbarItem from './NavbarItem';
 
 const Header = () => (
   <Navbar bg="light" expand="lg">
-    <div className="container-fluid">
+    <div className="container-fluid px-4 mx-3">
       <Navbar.Brand className="d-flex align-items-center flex-grow-1">
         <img
           src={logo}
