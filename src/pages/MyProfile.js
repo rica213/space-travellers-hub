@@ -6,17 +6,17 @@ const MyProfile = () => {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <div>
-      <div className="reserved-rockets">
-        <h2>My Rockets</h2>
-        <table className='table'>
+      <div className="m-4" style={{ width: '25%' }}>
+        <h4>My Rockets</h4>
+        <table className="table table-bordered" style={{ border: '1px solid #dddddd' }}>
           {reservedRockets.map((rocket) => (
-            <tr><th>{rocket.name}</th></tr>
+            <tr key={rocket.id}><th className="p-2 mx-2" style={{ color: '#444', fontWeight: 'normal' }}>{rocket.name}</th></tr>
           ))}
         </table>
-        
+
       </div>
-  </div>
-  )
+    </div>
+  );
 };
 
 export default MyProfile;
