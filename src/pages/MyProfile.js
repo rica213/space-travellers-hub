@@ -9,7 +9,7 @@ const MyProfile = () => {
   return (
     <div>
       <div
-        className="m-auto d-flex justify-content-around"
+        className="m-auto d-flex justify-content-around gap-5"
         style={{ width: '80%' }}
       >
         <div style={{ width: '95%' }}>
@@ -31,22 +31,13 @@ const MyProfile = () => {
           </table>
         </div>
         <div style={{ width: '95%' }}>
-          <h4>My Rockets</h4>
-          <table
-            className="table table-bordered"
-            style={{ border: '1px solid #dddddd' }}
-          >
-            {reservedRockets.map((rocket) => (
-              <tr key={rocket.id}>
-                <th
-                  className="p-2 mx-2"
-                  style={{ color: '#444', fontWeight: 'normal' }}
-                >
-                  {rocket.name}
-                </th>
-              </tr>
-            ))}
-          </table>
+        <h4>My Rockets</h4>
+        {reservedRockets.length <= 0 ? <p>No reserved rockets found!</p> : ''}
+        <table className="table table-bordered" style={{ border: '1px solid #dddddd' }}>
+          {reservedRockets.map((rocket) => (
+            <tr key={rocket.id}><th className="p-2 mx-2" style={{ color: '#444', fontWeight: 'normal' }}>{rocket.name}</th></tr>
+          ))}
+        </table>
         </div>
       </div>
     </div>
