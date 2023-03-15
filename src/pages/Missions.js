@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Badge, Button, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, joinMission } from '../redux/missions/missionsSlice';
+import { getMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const { missions } = useSelector((state) => state.missions);
@@ -47,7 +47,11 @@ const Missions = () => {
                   </Button>
                 )}
                 {mission.reserved && (
-                  <Button className="fs-6" variant="outline-danger">
+                  <Button
+                    className="fs-6"
+                    variant="outline-danger"
+                    onClick={() => dispatch(leaveMission(mission.id))}
+                  >
                     Leave Mission
                   </Button>
                 )}
