@@ -11,10 +11,10 @@ const NavbarItem = () => {
   return (
     <nav>
       {links.map((link, index) => (
-        <>
-          <NavLink className="nav-item" key={link.text} to={link.path}><span className="nav-link-text">{link.text}</span></NavLink>
+        <React.Fragment key={link.path}>
+          <NavLink className="nav-item" to={link.path}><span className="nav-link-text">{link.text}</span></NavLink>
           {links.length !== index + 1 ? <span className="separator"> | </span> : ''}
-        </>
+        </React.Fragment>
       ))}
     </nav>
   );
