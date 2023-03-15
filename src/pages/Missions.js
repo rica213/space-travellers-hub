@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Table } from 'react-bootstrap';
+import { Badge, Button, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from '../redux/missions/missionsSlice';
+import { getMissions, joinMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const { missions } = useSelector((state) => state.missions);
@@ -24,10 +24,34 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.id}>
-              <td className="fw-bold" style={{ width: '15%' }}>{mission.name}</td>
+              <td className="fw-bold" style={{ width: '15%' }}>
+                {mission.name}
+              </td>
               <td style={{ width: '55%' }}>{mission.description}</td>
-              <td />
-              <td />
+              <td style={{ width: '15%' }} className="align-middle">
+                {!mission.reserved && (
+                  <Badge bg="secondary" className="text-uppercase">
+                    not a member
+                  </Badge>
+                )}
+                {mission.reserved && <Badge bg="info">Active member</Badge>}
+              </td>
+              <td style={{ width: '15%' }} className="align-middle">
+                {!mission.reserved && (
+                  <Button
+                    className="fs-6"
+                    variant="outline-secondary"
+                    onClick={() => dispatch(joinMission(mission.id))}
+                  >
+                    Join Mission
+                  </Button>
+                )}
+                {mission.reserved && (
+                  <Button className="fs-6" variant="outline-danger">
+                    Leave Mission
+                  </Button>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
