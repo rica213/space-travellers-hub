@@ -8,7 +8,11 @@ const MyProfile = () => {
     <div>
       <div className="reserved-rockets">
         <h2>My Rockets</h2>
-        
+        <table className='table'>
+          {reservedRockets.map((rocket) => (
+            <tr><th>{rocket.name}</th></tr>
+          ))}
+        </table>
         
       </div>
   </div>
