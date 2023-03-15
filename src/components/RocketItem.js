@@ -24,7 +24,7 @@ const RocketItem = ({ rocket }) => {
           {description}
         </p>
         <div>
-          {(reserved && (<button type="button" className="btn btn-secondary" style={{ backgroundColor: '#fff', color: '#70777F' }}>Cancel Reservation</button>))}
+          {(reserved && (<button type="button" className="btn btn-secondary" style={{ backgroundColor: '#fff', color: '#70777F' }} onClick={() => handleRocketReservation(id)}>Cancel Reservation</button>))}
           {(!reserved && (<button type="button" className="btn btn-primary" onClick={() => handleRocketReservation(id)}>Reserve Rocket</button>))}
         </div>
       </div>
