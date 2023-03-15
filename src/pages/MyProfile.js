@@ -7,7 +7,7 @@ const MyProfile = () => {
   return (
     <div>
       <div className="m-4" style={{ width: '25%' }}>
-        <h4>My Rockets</h4>
+        {reservedRockets.length > 0 ? <h4>My Rockets</h4> : <p className="text-center">No reserved rockets found!</p>}
         <table className="table table-bordered" style={{ border: '1px solid #dddddd' }}>
           {reservedRockets.map((rocket) => (
             <tr key={rocket.id}><th className="p-2 mx-2" style={{ color: '#444', fontWeight: 'normal' }}>{rocket.name}</th></tr>
