@@ -1,0 +1,18 @@
+
+.rocketImg {
+  width: 300px;
+  height: 250px;
+}
+
+.description {
+  font-size: 0.8rem;
+}
+
+.reserved {
+  background-color: #18a2b8;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 7px;
+  text-align: center;
+  margin-right: 5px;
+}

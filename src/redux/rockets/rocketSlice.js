@@ -21,6 +21,7 @@ export const getRockets = createAsyncThunk('rockets/data', async () => {
 });
 
 const initialState = {
+  isLoading: true,
   rockets: [],
 };
 
@@ -48,6 +49,7 @@ const rocketSlice = createSlice({
     builder.addCase(getRockets.fulfilled, (state, action) => ({
       ...state,
       rockets: action.payload,
+      isLoading: false,
     }));
   },
 });

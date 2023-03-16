@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import logo from '../assets/images/space-hub-logo.png';
 import NavbarItem from './NavbarItem';
 
 const Header = () => (
   <Navbar bg="light" expand="lg">
-    <Container>
+    <div className="container-fluid px-4 mx-3">
       <Navbar.Brand className="d-flex align-items-center flex-grow-1">
         <img
           src={logo}
@@ -18,7 +18,7 @@ const Header = () => (
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <NavbarItem />
       </Navbar.Collapse>
-    </Container>
+    </div>
   </Navbar>
 );
 
