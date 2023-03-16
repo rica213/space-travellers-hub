@@ -10,7 +10,7 @@ const Header = () => (
         <img
           src={logo}
           alt="space traveller hub logo"
-          style={{ width: '75px' }}
+          style={{ width: "75px" }}
         />
         <p>Space Travelers&apos; Hub</p>
       </Navbar.Brand>

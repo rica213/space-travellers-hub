@@ -9,7 +9,7 @@ const NavbarItem = () => {
   ];
 
   return (
-    <nav>
+    <nav data-testid="navbar-item">
       {links.map((link, index) => (
         <React.Fragment key={link.path}>
           <NavLink className="nav-item" to={link.path}><span className="nav-link-text">{link.text}</span></NavLink>
