@@ -90,9 +90,9 @@ $ npm start
 
 👤 **Tao Larissa**
 
-- GitHub: 
-- Twitter: 
-- LinkedIn: 
+- GitHub: [@rica213](https://github.com/rica213)
+- Twitter: [@alc3and](https://twitter.com/alc3and)
+- LinkedIn: [larissa-clarielle](https://www.linkedin.com/in/larissa-clarielle/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +101,7 @@ $ npm start
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Add contact section to get in touch with users
-- [ ] Add and display comments for each rocket mission
+- [ ] Add display comments for each rocket mission
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
