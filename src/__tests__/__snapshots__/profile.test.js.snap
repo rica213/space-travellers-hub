@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="m-auto d-flex justify-content-around gap-5"
+    style={
+      Object {
+        "width": "80%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "width": "95%",
+        }
+      }
+    >
+      <h4>
+        My Missions
+      </h4>
+      <table
+        className="table table-bordered"
+        style={
+          Object {
+            "border": "1px solid #dddddd",
+          }
+        }
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "width": "95%",
+        }
+      }
+    >
+      <h4>
+        My Rockets
+      </h4>
+      <p>
+        No reserved rockets found!
+      </p>
+      <table
+        className="table table-bordered"
+        style={
+          Object {
+            "border": "1px solid #dddddd",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

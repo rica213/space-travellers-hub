@@ -6,7 +6,7 @@ export const getMissions = createAsyncThunk(
   'missions/getMissions',
   async (_, thunkAPI) => {
     try {
-      const res = await axios(urlMission);
+      const res = await axios.get(urlMission);
       const missionsData = await res.data.map((mission) => ({
         id: mission.mission_id,
         name: mission.mission_name,
