@@ -1,6 +1,7 @@
 {
   "name": "space-travellers-hub",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -17,6 +18,7 @@
     "react-router": "^6.9.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
     "redux-logger": "^3.0.6",
     "web-vitals": "^2.1.4"
   },
@@ -25,6 +27,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   },
   "eslintConfig": {
     "extends": [
