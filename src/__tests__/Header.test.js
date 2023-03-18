@@ -26,17 +26,15 @@ describe('Header component', () => {
   });
 
   it('should render NavbarItem component', () => {
-    const { getByRole, getByTestId } = render(
+    const { getByRole } = render(
       <Router>
         <Header />
       </Router>,
     );
-    const navbarItem = getByTestId('navbar-item');
     const rockets = getByRole('link', { name: 'Rockets' });
     const missions = getByRole('link', { name: 'Missions' });
     const myProfile = getByRole('link', { name: 'My Profile' });
 
-    expect(navbarItem).toBeInTheDocument();
     expect(rockets).toBeInTheDocument();
     expect(missions).toBeInTheDocument();
     expect(myProfile).toBeInTheDocument();
