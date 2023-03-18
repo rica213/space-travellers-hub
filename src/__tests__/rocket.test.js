@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
-import Rockets from '../pages/rockets';
+import Rockets from '../pages/Rockets';
 import store from '../redux/store';
 import { getRockets, reserveRocket } from '../redux/rockets/rocketSlice';
 
