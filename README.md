@@ -16,7 +16,7 @@
 - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-    - [Key Features](#key-features)
+- [Key Features](#key-features)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [⭐️ Show your support](#support)
@@ -28,7 +28,7 @@
 
 This webapp works with real live data from the SpaceX API. The application provides commercial and scientific space travel services. It also allows users to book rockets and join selected space missions.
 
-## 🛠 Built With <a name="built-with">Build With</a>
+## 🛠 Built With <a name="built-with"></a>
  - React
  - Redux
 
@@ -88,7 +88,7 @@ $ npm start
 - Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
 - LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
 
-👤 **Tao Larissa**
+👤 **(Tao) Larissa**
 
 - GitHub: [@rica213](https://github.com/rica213)
 - Twitter: [@alc3and](https://twitter.com/alc3and)
